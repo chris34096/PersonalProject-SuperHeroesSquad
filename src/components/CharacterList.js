@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import { addCharacterById } from "../actions";
 
 class CharacterList extends Component {
   render() {
-    console.log("this.props", this.props);
-
     return (
       <div>
         <h4>Characters</h4>
@@ -18,7 +17,7 @@ class CharacterList extends Component {
                   className="list-item right-button"
                   onClick={() => this.props.addCharacterById(character.id)}
                 >
-                  +
+                  add
                 </div>
               </li>
             );
@@ -30,7 +29,6 @@ class CharacterList extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log("state", state);
   return {
     characters: state.characters
   };
