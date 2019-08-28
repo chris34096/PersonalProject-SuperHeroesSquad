@@ -6,7 +6,7 @@ class HeroList extends Component {
   render() {
     return (
       <div>
-        <h4>Your Super Hero Squad</h4>
+        <h4>Your Hero Squad</h4>
         <ul className="list-group">
           {this.props.heroes.map(hero => {
             return (
@@ -16,7 +16,7 @@ class HeroList extends Component {
                   className="list-item right-button"
                   onClick={() => this.props.removeCharacterById(hero.id)}
                 >
-                  Delete
+                  x
                 </div>
               </li>
             );

@@ -5,6 +5,8 @@ import { addCharacterById } from "../actions";
 
 class CharacterList extends Component {
   render() {
+    console.log("this.props", this.props);
+
     return (
       <div>
         <h4>Characters</h4>
@@ -17,7 +19,7 @@ class CharacterList extends Component {
                   className="list-item right-button"
                   onClick={() => this.props.addCharacterById(character.id)}
                 >
-                  add
+                  +
                 </div>
               </li>
             );
@@ -34,8 +36,8 @@ function mapStateToProps(state) {
   };
 }
 
-//function mapDispatchToProps(dispatch) {
-//  return bindActionCreators({ addCharacterById }, dispatch);
+// function mapDispatchToProps(dispatch) {
+//   return bindActionCreators({ addCharacterById }, dispatch)
 // }
 
 export default connect(

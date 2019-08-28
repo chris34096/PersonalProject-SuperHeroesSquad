@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDom from "react-dom";
+import ReactDOM from "react-dom";
 import App from "./components/App";
 
 import { createStore } from "redux";
@@ -13,7 +13,7 @@ console.log("store.getState()", store.getState());
 store.subscribe(() => console.log("store", store.getState()));
 store.dispatch(addCharacterById(2));
 
-ReactDom.render(
+ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
